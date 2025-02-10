@@ -4,6 +4,7 @@ import Fluent
 
 // configures your application
 public func configure(_ app: Application) async throws {
+    app.core.initialize()  // Add this line
     guard let databaseURL = Environment.get("DATABASE_URL")
     else {
         app.shutdown()
